@@ -1,9 +1,11 @@
 const pizzaList = [
     {
         url: 'https://picsum.photos/400',
-        name: 'Liza',
-        age: Math.floor(Math.random() * 100),
-        price: Math.floor(Math.random()*10000)
+        name: 'big mac',
+        type: 'burger',
+        brand: 'Mc',
+        description: 'Малосольные огурчики пипрони с молочком',
+        price: Math.floor(Math.random()*1000)
     }
 ]
 

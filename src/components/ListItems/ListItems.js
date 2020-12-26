@@ -15,11 +15,12 @@ class ListItems extends Component {
 
     render() {
         return (
-            <div style={{display:'flex'}}>
+            <div style={{ display: 'flex' }}>
                 {
                     this.state.data.map((el, index) => {
                         return (
                             <Item
+                                key={index}
                                 el={el}
                             />
                         )

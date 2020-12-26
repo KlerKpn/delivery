@@ -6,12 +6,13 @@ const Item = (props) => {
     return (
         <div className={classes.Item}>
             <div key={props.index}>
-                <img className={classes.url} src={props.el.url} alt='' />
-                <div>Name:{props.el.name} age:{props.el.age}</div>
+                <h6>{props.el.name}</h6>
                 <div>
                     <span>Price {props.el.price}</span>
                     <button className='btn btn-primary'>Buy</button>
                 </div>
+                <img className={classes.url} src={props.el.url} alt='' />
+
             </div>
         </div>
     )
