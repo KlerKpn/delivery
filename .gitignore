@@ -21,3 +21,6 @@
 
 .eslintcache
 *log
+.firebase
+firebase.json
+.firebaserc

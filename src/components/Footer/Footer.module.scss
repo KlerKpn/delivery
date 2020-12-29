@@ -1,0 +1,41 @@
+.Footer{
+    width: 100%;
+    background: #262626;
+    color: #fff;
+        .Column{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+                .logo{
+                    height: 116px;
+                    display: flex;
+                    align-items: center;
+                }
+                .About{
+                    height: 220px;
+
+                    border-top: 1px solid #ccc;
+                    border-bottom: 1px solid #fff;
+                }
+                .Store{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    height: 120px;
+                        img{
+                            height: 40px;
+                            cursor: pointer;
+                        }
+                }
+                .Privacy{
+                    height: 93px;
+                    border-top: 1px solid #ccc;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                }
+        }
+        
+}

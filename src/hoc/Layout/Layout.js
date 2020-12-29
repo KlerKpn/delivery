@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import classes from './Layout.module.scss'
 import NavBar from './../../components/Navigation/NavBar/NavBar';
 import MenuToggle from './../../components/Navigation/MenuToggle/MenuToggle';
+import Footer from '../../components/Footer/Footer';
 
 
 
@@ -23,10 +24,13 @@ const Layout = props => {
                 menu={menu}
                 onToggle={handleMenu}
             />
-
-            <main className='container'>
+            <main
+                className='container'
+                style={{margin: '80px auto'}}
+            >
                 {props.children}
             </main>
+            <Footer />
         </div>
     )
 }
