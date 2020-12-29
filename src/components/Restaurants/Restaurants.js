@@ -1,15 +1,17 @@
 import React from 'react'
+import classes from './Restaurants.module.scss'
 import { connect } from 'react-redux';
-import Item from '../Item/Items'
-import classes from './ListItems.module.scss'
+import RestrItem from "./RestrItem";
 
-const ListItems = props => {
+
+const Restaurants = props => {
+    console.log(props.data)
     return (
-        <div className={classes.ListItems}>
-            {
+        <div className={classes.Restaurant}>
+             {
                 props.data.map((el, index) => {
                     return (
-                        <Item
+                        <RestrItem
                             key={index}
                             el={el}
                         />
@@ -18,13 +20,12 @@ const ListItems = props => {
             }
         </div>
     )
-
 }
 
 function mapStateToProps(state) {
     return {
-        data: state.dishReducer.data
+        data: state.restrReducer.data
     }
 }
 
-export default connect(mapStateToProps)(ListItems)
+export default connect(mapStateToProps)(Restaurants)

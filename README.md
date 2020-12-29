@@ -1,6 +1,5 @@
-* Tech
- * react
-  * redux
-   * react-router
-    * react hooks
+* react
+ * redux
+  * react-router
+   * react hooks
     

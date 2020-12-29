@@ -12,13 +12,14 @@ function NavBar(props) {
 
     const links = [
         { title: 'Главная', path: '/', exact: true },
-        { title: 'Рестораны', path: '/hntj', exact: true }
+        { title: 'Рестораны', path: '/restaurants/', exact: true },
+        { title: 'Авторизация', path: '/auth/', exact: true }
     ]
 
     return (
         <>
             <div className={cls.join(' ')}>
-                <div>
+                <div style={{ width: '100%' }}>
                     <ul>
                         {
                             links.map((element, index) => {
@@ -29,7 +30,7 @@ function NavBar(props) {
                                         <NavLink
                                             to={element.path}
                                             exact={element.exact}
-                                            // className={classes.active}
+                                            onClick={props.onToggle}
                                         >
                                             {element.title}
                                         </NavLink>
