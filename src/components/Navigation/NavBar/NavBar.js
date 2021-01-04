@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classes from "./NavBar.module.scss";
 import Backdrop from './../../UI/Backdrop/Backdrop';
 import { NavLink } from 'react-router-dom';

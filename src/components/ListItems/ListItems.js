@@ -1,24 +1,48 @@
-import React from 'react'
-import { connect } from 'react-redux';
+import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
 import Item from '../Item/Items'
+import Search from '../Search/Search'
 import classes from './ListItems.module.scss'
 
 const ListItems = props => {
-    return (
-        <div className={classes.ListItems}>
-            {
-                props.data.map((el, index) => {
-                    return (
-                        <Item
-                            key={index}
-                            el={el}
-                        />
-                    )
-                })
-            }
-        </div>
-    )
 
+    const [data, setData] = useState()
+
+    function search(value) {
+        const filterData = props.data.filter(el => {
+            if (el.label.toLowerCase().includes(value.toLowerCase())) {
+                return el
+            } 
+        })
+        setData(prev => prev = filterData)
+    }
+
+    useEffect(() => {
+        setData(prev => prev = props.data)
+    }, [])
+
+    return (
+        <>
+            <Search
+                onChange={search}
+            />
+            <h2>Все блюда</h2>
+            <div className={classes.ListItems}>
+                {
+                    data
+                        ? data.map((el, index) => {
+                            return (
+                                <Item
+                                    key={index}
+                                    el={el}
+                                />
+                            )
+                        })
+                        : null
+                }
+            </div>
+        </>
+    )
 }
 
 function mapStateToProps(state) {

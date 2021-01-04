@@ -26,7 +26,7 @@ const Layout = props => {
             />
             <main
                 className='container'
-                style={{margin: '80px auto'}}
+                // style={{margin: '40px auto'}}
             >
                 {props.children}
             </main>

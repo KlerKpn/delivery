@@ -1,0 +1,13 @@
+.Search{
+    width: 100%;
+    padding: 15px 0 ;
+    border-bottom: 1px solid black;
+    margin: 40px 0;
+    .input{
+        display: flex;
+        align-items: center;
+        border: none;
+        width: 100%;
+        outline: none;
+    }
+}

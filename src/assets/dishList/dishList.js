@@ -1,57 +1,57 @@
 const dishList = [
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'big mac',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'big dick',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'small dick',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'big mac',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'big mac',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'big mac',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },
     {
         url: 'https://picsum.photos/400',
-        name: 'big mac',
+        label: 'big mac',
         type: 'burger',
-        brand: 'Mc',
+        brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
         price: Math.floor(Math.random()*1000)
     },

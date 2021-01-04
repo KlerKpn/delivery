@@ -1,11 +1,10 @@
 import React from 'react'
 import classes from './Restaurants.module.scss'
 import { connect } from 'react-redux';
-import RestrItem from "./RestrItem";
+import RestrItem from "../RestrItem/RestrItem";
 
 
-const Restaurants = props => {
-    console.log(props.data)
+const RestaurantsList = props => {
     return (
         <div className={classes.Restaurant}>
              {
@@ -28,4 +27,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Restaurants)
+export default connect(mapStateToProps)(RestaurantsList)
