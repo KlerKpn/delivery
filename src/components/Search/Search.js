@@ -6,7 +6,7 @@ const Search = props => {
         <div className={classes.Search}>
             <input
                 className={classes.input}
-                placeholder='Поиск'
+                placeholder='Поиск по блюдам'
                 onChange={event => props.onChange(event.target.value)}
             />
         </div>

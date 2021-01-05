@@ -1,3 +1,4 @@
+import Teremok from '../image/Teremok.jpg'
 
 
 const restaurantsList = [
@@ -9,9 +10,9 @@ const restaurantsList = [
     },
     {
         type: 'Restaurant',
-        label: '[eq[e[q[e[q]]]]]s',
-        say: 'Любовь побеждает ненависть',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png'
+        label: 'Теремок',
+        say: 'ОК? Это «Теремок!»',
+        image: Teremok
     }
 ]
 

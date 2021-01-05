@@ -26,11 +26,11 @@ function NavBar(props) {
                                 return (
                                     <li
                                         key={index}
+                                        onClick={props.onToggle}
                                     >
                                         <NavLink
                                             to={element.path}
                                             exact={element.exact}
-                                            onClick={props.onToggle}
                                         >
                                             {element.title}
                                         </NavLink>

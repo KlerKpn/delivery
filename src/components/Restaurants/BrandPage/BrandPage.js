@@ -36,7 +36,6 @@ const BrandPage = props => {
 
     function tabsGenerator() {
         const tabsData = new Set(dishList.map(el => el.type))
-        console.log(tabsData)
         const tabs = (
             <Tabs>
                 <TabList>
@@ -48,24 +47,30 @@ const BrandPage = props => {
                         })
                     }
                 </TabList>
+
                 {
-                    [...tabsData].map(el => {
-                        
+                    [...tabsData].map(element => {
                         return (
                             <TabPanel>
-                                {el}
+                                {dishList.map(el => {
+                                    if (element === el.type)
+                                        return (
+                                            <div
+                                                className={classes.dish}
+                                            >
+                                                <h1>{el.label}</h1>
+                                            </div>
+                                        )
+                                })}
                             </TabPanel>
                         )
                     })
                 }
 
             </Tabs>
-
         )
         return tabs
     }
-
-
 
     return (
         <>
@@ -74,29 +79,7 @@ const BrandPage = props => {
                     ? <div className={classes.Brand}>
                         <div>{brand.label}</div>
                         <div>{brand.say}</div>
-
-
-
                         {tabsGenerator()}
-
-
-
-
-
-
-                        {
-                            dishList
-                                ? dishList.map(el => {
-                                    return (
-                                        <div
-                                            className={classes.dish}
-                                        >
-                                            <div>{el.label}</div>
-                                        </div>
-                                    )
-                                })
-                                : null
-                        }
                     </div>
                     : null
             }
