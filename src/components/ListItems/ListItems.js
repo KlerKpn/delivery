@@ -18,6 +18,7 @@ const ListItems = props => {
     }
 
     useEffect(() => {
+        console.log(props.data)
         setData(prev => prev = props.data)
     }, [])
 
