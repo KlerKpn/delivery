@@ -7,14 +7,16 @@ const Item = (props) => {
     return (
         <div className={classes.Item}>
             <div key={props.index} style={{ width: '100%' }}>
-                <h6>{props.el.label}</h6>
-                <div className={classes.Money}>
-                    <span>Price {props.el.price}</span>
-                    <Button
-                        type='primary'
-                    >
-                        Add to card
+                <div className={classes.Item_head}>
+                    <div className={classes.Item_label}>{props.el.label}</div>
+                    <div className={classes.Money}>
+                        <span className={classes.Items_price}>{props.el.price} руб.</span>
+                        <Button
+                            type='primary'
+                        >
+                            Add to card
                     </Button>
+                    </div>
                 </div>
                 <img className={classes.url} src={props.el.url} alt='' />
             </div>

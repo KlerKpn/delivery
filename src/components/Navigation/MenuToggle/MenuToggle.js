@@ -23,7 +23,7 @@ const MenuToggle = props => {
                     onClick={props.onToggle}
                 />
                 <Button
-                    type='primary'
+                    type='dark'
                 >
                     корзина
                     </Button> 

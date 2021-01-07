@@ -1,7 +1,8 @@
 import dishList from '../../assets/dishList/dishList'
 
 const initialState = {
-    data: dishList
+    data: dishList,
+    buy: []
 }
 
 export default function dishReducer(state = initialState, action) {
