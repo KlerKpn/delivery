@@ -13,8 +13,9 @@ const Auth = () => {
         <div className={classes.Auth}>
             <h2>Авторизация</h2>
             <form onSubmit={submitHandler}>
-                <Input />
-                <Input />
+                <Input
+                type='email' />
+                <Input  type='password'/>
                 <Button
                     type='primary'
                 >

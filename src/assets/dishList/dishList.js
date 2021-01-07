@@ -25,6 +25,14 @@ const dishList = [
     },
     {
         url: 'https://picsum.photos/400',
+        label: 'Кола',
+        type: 'Напитки',
+        brand: 'Mac Donalds',
+        description: 'Малосольные огурчики пипрони с молочком',
+        price: Math.floor(Math.random()*1000)
+    },
+    {
+        url: 'https://picsum.photos/400',
         label: 'big mac',
         type: 'burger',
         brand: 'Mac Doknalds',

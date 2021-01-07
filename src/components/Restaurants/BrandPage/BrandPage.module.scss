@@ -1,3 +1,26 @@
+
+
 .BrandPage{
-    
+    display: flex;
+    flex-direction: column;
+    .Type_Title{
+        font-size: 30px;
+        margin: 10px 10px;
+        &::first-letter{
+            text-transform: uppercase;
+        }
+    }
+    .Brand_BG{
+
+        background-image: url(../../../assets/image/BG.png);
+        background-position: center;
+        height: 364px;
+        width: 100%;
+        
+        .Brand_image{
+            width: 100%;
+            height: auto;
+        }
+    }
+   
 }

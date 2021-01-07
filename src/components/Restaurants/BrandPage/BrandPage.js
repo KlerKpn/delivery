@@ -3,6 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import classes from './BrandPage.module.scss'
 import { connect } from 'react-redux'
+import Item from './../../Item/Items'
+import BG from '../../../assets/image/BG.png'
 
 const BrandPage = props => {
     // console.log(props.match.params.id, props.brand)
@@ -36,13 +38,14 @@ const BrandPage = props => {
 
     function tabsGenerator() {
         const tabsData = new Set(dishList.map(el => el.type))
+        let currentType = null
         const tabs = (
             <Tabs>
                 <TabList>
                     {
                         [...tabsData].map(el => {
                             return (
-                                <Tab>{el}</Tab>
+                                <Tab className={classes.BrandPage_tab}>{el}</Tab>
                             )
                         })
                     }
@@ -50,16 +53,15 @@ const BrandPage = props => {
 
                 {
                     [...tabsData].map(element => {
+
                         return (
+                            
                             <TabPanel>
+                                <div className={classes.Type_Title}>{element}</div>
                                 {dishList.map(el => {
                                     if (element === el.type)
                                         return (
-                                            <div
-                                                className={classes.dish}
-                                            >
-                                                <h1>{el.label}</h1>
-                                            </div>
+                                            <Item el={el} />
                                         )
                                 })}
                             </TabPanel>
@@ -76,9 +78,13 @@ const BrandPage = props => {
         <>
             {
                 brand
-                    ? <div className={classes.Brand}>
-                        <div>{brand.label}</div>
-                        <div>{brand.say}</div>
+                    ? <div className={classes.BrandPage}>
+                        <div className={classes.Brand_BG}>
+                            <div>
+                                <image className={classes.Brand_image} src={BG} alt='logo'/>
+                            </div>
+                        </div>
+
                         {tabsGenerator()}
                     </div>
                     : null

@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './MenuToggle.module.scss'
+import Button from './../../UI/Button/Button';
 
 const MenuToggle = props => {
     const cls = [
@@ -15,19 +16,19 @@ const MenuToggle = props => {
     }
 
     return (
-        <div className={classes.Head}>
-            {
-                props.menu
-                    ? null
-
-                    : 
-                        <i
-                            className={cls.join(' ')}
-                            onClick={props.onToggle}
-                        />
-                    
-            }
-        </div>
+        <>
+            <div className={classes.Head}>
+                <i
+                    className={cls.join(' ')}
+                    onClick={props.onToggle}
+                />
+                <Button
+                    type='primary'
+                >
+                    корзина
+                    </Button> 
+            </div>
+        </>
     )
 }
 
