@@ -3,7 +3,6 @@
     width: 100%;
     background: #262626;
     color: #fff;
- 
         .Column{
             height: 100%;
             display: flex;
@@ -16,9 +15,36 @@
                 }
                 .About{
                     height: 220px;
-
+                    display: flex;
+                    padding: 32px 0;
                     border-top: 1px solid #ccc;
                     border-bottom: 1px solid #fff;
+                        .Footer_column{
+                            width: 33.33%;
+                            display: flex;
+                            flex-direction: column;
+                            select{
+                                max-width: 227px;
+                                background: #262626;
+                                color: white;
+                                font-size: .6rem;
+                                text-transform: uppercase;
+                                padding: 8px 24px;
+                                option{
+                                    font-size: .6rem;
+                                }
+                            }
+                            ul{
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                    li{
+                                        margin-bottom: 23px;
+                                        font-size: .6rem;
+                                    }
+                            }
+                        }
+                       
                 }
                 .Store{
                     display: flex;
@@ -36,8 +62,12 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    
+                        .Privacy_block{
+                            font-size: .5rem;
+                            width: 33.33%;
+                        }
                 }
         }
         
 }
+
