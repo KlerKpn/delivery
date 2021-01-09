@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './MenuToggle.module.scss'
 import Button from './../../UI/Button/Button';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const MenuToggle = props => {
     const cls = [
@@ -22,14 +24,24 @@ const MenuToggle = props => {
                     className={cls.join(' ')}
                     onClick={props.onToggle}
                 />
-                <Button
-                    type='dark'
+                <Link
+                    to='/stash'
                 >
-                    корзина
-                    </Button> 
+                    <Button
+                        type='dark'
+                    >
+                        Корзина [{props.stash.length}]
+                    </Button>
+                </Link>
+
             </div>
         </>
     )
 }
 
-export default MenuToggle
+function mapStateToProps(state) {
+    return {
+        stash: state.dishReducer.stash
+    }
+}
+export default connect(mapStateToProps)(MenuToggle)

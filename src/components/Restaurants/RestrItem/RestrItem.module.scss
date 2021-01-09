@@ -1,22 +1,15 @@
 .Item{
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 40px;
-        .url{
-            width: 100px;
+    background: rgb(250, 250, 250);
+    box-shadow: 0px 0px 10px 3px #ccc;
+        .image{
+            width: 100%;
             height: auto;
         }
-        .Money{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .label{
-            text-align: center;
-        }
+        .Item_head{
+            padding: 10px;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }        
 }

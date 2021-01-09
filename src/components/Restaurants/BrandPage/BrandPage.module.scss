@@ -16,10 +16,17 @@
         background-position: center;
         height: 364px;
         width: 100%;
-        
         .Brand_image{
             width: 100%;
             height: auto;
+        }
+    }
+    .Tab_panel{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2vw;
+        @media (max-width: 1000px) {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         }
     }
    

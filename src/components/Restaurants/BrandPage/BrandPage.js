@@ -38,14 +38,19 @@ const BrandPage = props => {
 
     function tabsGenerator() {
         const tabsData = new Set(dishList.map(el => el.type))
-        let currentType = null
         const tabs = (
             <Tabs>
                 <TabList>
                     {
                         [...tabsData].map(el => {
+                            const key = el + Math.floor(Math.random() * 10000)
                             return (
-                                <Tab className={classes.BrandPage_tab}>{el}</Tab>
+                                <Tab
+                                    key={key}
+                                    className={classes.BrandPage_tab}
+                                >
+                                    {el}
+                                </Tab>
                             )
                         })
                     }
@@ -53,17 +58,17 @@ const BrandPage = props => {
 
                 {
                     [...tabsData].map(element => {
-
                         return (
-                            
                             <TabPanel>
                                 <div className={classes.Type_Title}>{element}</div>
-                                {dishList.map(el => {
-                                    if (element === el.type)
-                                        return (
-                                            <Item el={el} />
-                                        )
-                                })}
+                                <div className={classes.Tab_panel}>
+                                    {dishList.map(el => {
+                                        if (element === el.type)
+                                            return (
+                                                <Item el={el} />
+                                            )
+                                    })}
+                                </div>
                             </TabPanel>
                         )
                     })
@@ -81,7 +86,7 @@ const BrandPage = props => {
                     ? <div className={classes.BrandPage}>
                         <div className={classes.Brand_BG}>
                             <div>
-                                <image className={classes.Brand_image} src={BG} alt='logo'/>
+                                <image className={classes.Brand_image} src={BG} alt='logo' />
                             </div>
                         </div>
 

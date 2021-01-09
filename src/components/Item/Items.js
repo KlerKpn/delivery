@@ -1,6 +1,8 @@
 import React from 'react'
 import classes from './Item.module.scss'
 import Button from './../UI/Button/Button';
+import { connect } from 'react-redux';
+import { addToStash } from './../../store/actions/actionDish';
 
 
 const Item = (props) => {
@@ -13,9 +15,10 @@ const Item = (props) => {
                         <span className={classes.Items_price}>{props.el.price} руб.</span>
                         <Button
                             type='primary'
+                            onClick={() => props.toStash(props.el)}
                         >
-                            Add to card
-                    </Button>
+                            В корзину
+                        </Button>
                     </div>
                 </div>
                 <img className={classes.url} src={props.el.url} alt='' />
@@ -23,5 +26,10 @@ const Item = (props) => {
         </div>
     )
 }
+function mapDispathToProps(dispatch) {
+    return {
+        toStash: el => dispatch(addToStash(el))
+    }
+}
 
-export default Item
+export default connect(null, mapDispathToProps)(Item)

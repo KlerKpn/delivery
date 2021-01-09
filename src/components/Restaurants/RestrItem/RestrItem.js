@@ -10,8 +10,10 @@ const RestrItem = (props) => {
         >
             <div className={classes.Item}>
                 <div key={props.index} style={{ width: '100%' }}>
-                    <div className={classes.label}>{props.el.label}</div>
-                    <img className={classes.url} src={props.el.image} alt='' />
+                    <div className={classes.Item_head}>
+                        <div className={classes.Item_label}>{props.el.label}</div>
+                    </div>
+                    <img className={classes.image} src={props.el.image} alt='logo' />
                 </div>
             </div>
         </Link>

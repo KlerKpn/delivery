@@ -14,15 +14,21 @@
                     align-items: center;
                 }
                 .About{
-                    height: 220px;
+                    height: auto;
                     display: flex;
                     padding: 32px 0;
                     border-top: 1px solid #ccc;
                     border-bottom: 1px solid #fff;
+                        @media (max-width:1000px) {
+                            flex-direction: column;
+                        }
                         .Footer_column{
                             width: 33.33%;
                             display: flex;
                             flex-direction: column;
+                            @media (max-width:1000px) {
+                                width: 100%;
+                            }
                             select{
                                 max-width: 227px;
                                 background: #262626;
@@ -30,6 +36,7 @@
                                 font-size: .6rem;
                                 text-transform: uppercase;
                                 padding: 8px 24px;
+                                margin-bottom: 23px;
                                 option{
                                     font-size: .6rem;
                                 }
@@ -38,9 +45,13 @@
                                 list-style: none;
                                 padding: 0;
                                 margin: 0;
+                             
                                     li{
                                         margin-bottom: 23px;
                                         font-size: .6rem;
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
                                     }
                             }
                         }
@@ -57,14 +68,28 @@
                         }
                 }
                 .Privacy{
-                    height: 93px;
+                    height: auto;
                     border-top: 1px solid #ccc;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @media (max-width:1000px) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
                         .Privacy_block{
                             font-size: .5rem;
                             width: 33.33%;
+                            margin: 23px 0;
+                            @media  (max-width:1000px) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin: 0;
+                                margin-bottom: 23px;
+                                &:first-child{
+                                    margin-top: 23px;
+                                }
+                            }
                         }
                 }
         }

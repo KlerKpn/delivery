@@ -1,17 +1,22 @@
 import dishList from '../../assets/dishList/dishList'
+import { ADD_TO_STASH } from './../actions/ActionTypes';
 
 const initialState = {
     data: dishList,
-    buy: []
+    stash: []
 }
 
 export default function dishReducer(state = initialState, action) {
     switch (action.type) {
-        case 1:
-            
-            break;
-    
+        case ADD_TO_STASH:
+            return {
+                ...state,
+                stash: [...state.stash, action.payload]
+            }
+
         default:
-            return {...state}
+            return { ...state }
     }
 }
+
+console.log(initialState.stash)

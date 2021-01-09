@@ -4,8 +4,6 @@ import NavBar from './../../components/Navigation/NavBar/NavBar';
 import MenuToggle from './../../components/Navigation/MenuToggle/MenuToggle';
 import Footer from '../../components/Footer/Footer';
 
-
-
 const Layout = props => {
 
     const [menu, setMenu] = useState(false)
@@ -26,7 +24,7 @@ const Layout = props => {
             />
             <main
                 className='container'
-                // style={{marginTop: '80px'}}
+            // style={{marginTop: '80px'}}
             >
                 {props.children}
             </main>
@@ -34,5 +32,6 @@ const Layout = props => {
         </div>
     )
 }
+
 
 export default Layout

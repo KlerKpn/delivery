@@ -60,9 +60,9 @@ const Footer = () => {
                     <img src={GooglePlay} alt='Google Play' />
                 </div>
                 <div className={classes.Privacy}>
-                    <div className={classes.Privacy_block}>2021 Technologies Inc.</div>
+                    <div className={classes.Privacy_block}>2021 KlerKpn Technologies Inc.</div>
                     <div className={classes.Privacy_block}>Privacy</div>
-                    <div className={classes.Privacy_block}>Terms</div>
+                    <div className={classes.Privacy_block}>github.com/KlerKpn</div>
                 </div>
             </div>
         </footer>

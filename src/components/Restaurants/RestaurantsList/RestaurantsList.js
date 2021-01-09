@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Restaurants.module.scss'
-import { connect } from 'react-redux';
-import RestrItem from "../RestrItem/RestrItem";
+import { connect } from 'react-redux'
+import RestrItem from "../RestrItem/RestrItem"
 
 
 const RestaurantsList = props => {
