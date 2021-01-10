@@ -1,0 +1,26 @@
+.StashItem{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+   
+    .Head{
+
+        display: flex;
+        flex-direction: row-reverse;
+        .label{
+            display: flex;
+            align-items: center;
+        }
+        .image{
+            img{
+                height: 150px;
+                width: auto;
+            }
+        }
+    }
+    .counter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
