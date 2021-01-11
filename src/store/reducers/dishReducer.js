@@ -18,5 +18,3 @@ export default function dishReducer(state = initialState, action) {
             return { ...state }
     }
 }
-
-console.log(initialState.stash)

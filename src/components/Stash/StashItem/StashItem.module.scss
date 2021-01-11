@@ -14,10 +14,11 @@
         .image{
             img{
                 height: 150px;
-                width: auto;
+                width: 150px;
             }
         }
     }
+
     .counter{
         display: flex;
         flex-direction: column;

@@ -26,10 +26,10 @@ const Item = (props) => {
         </div>
     )
 }
-function mapDispathToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
     return {
         toStash: el => dispatch(addToStash(el))
     }
 }
 
-export default connect(null, mapDispathToProps)(Item)
+export default connect(null, mapDispatchToProps)(Item)
