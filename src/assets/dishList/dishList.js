@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 const dishList = [
     {
         url: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Big_Mac_hamburger.jpg',
@@ -5,7 +7,8 @@ const dishList = [
         type: 'burger',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 135
+        price: 135,
+        id: uuid()
     },
     {
         url: 'https://d1nqx6es26drid.cloudfront.net/app/uploads/2015/04/04043817/product-hamburger.png',
@@ -13,7 +16,8 @@ const dishList = [
         type: 'burger',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 48
+        price: 48,
+        id: uuid()
     },
     {
         url: 'https://www.mcdonalds.com/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Cheeseburger.jpg',
@@ -21,7 +25,8 @@ const dishList = [
         type: 'burger',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 50
+        price: 50,
+        id: uuid()
     },
     {
         url: 'https://mcdonalds-kupony.ru/wp-content/uploads/2019/10/4g25n3fgn.png',
@@ -29,7 +34,8 @@ const dishList = [
         type: 'Напитки',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 75
+        price: 75,
+        id: uuid()
     },
     {
         url: 'https://d1nqx6es26drid.cloudfront.net/app/uploads/2015/04/04044451/product-french-fries.png',
@@ -37,7 +43,8 @@ const dishList = [
         type: 'Картофель',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 48
+        price: 48,
+        id: uuid()
     },
     {
         url: 'https://www.mcdonalds.com/content/dam/usa/nfl/nutrition/items/regular/desktop/t-mcdonalds-Double-Cheeseburger.jpg',
@@ -45,7 +52,8 @@ const dishList = [
         type: 'burger',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 135
+        price: 135,
+        id: uuid()
     },
     {
         url: 'https://mcdonalds.ru/resize/-x1020/upload/iblock/2c7/2086_Ceasar_Roll_1500x1500_min.png',
@@ -53,7 +61,8 @@ const dishList = [
         type: 'burger',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 163
+        price: 163,
+        id: uuid()
     },
     {
         url: 'https://mcdonalds.ru/resize/-x1020/upload/iblock/bec/0000_Flurry_Tiramisu_1500x1500_min-_1_.png',
@@ -61,7 +70,8 @@ const dishList = [
         type: 'burger',
         brand: 'Mac Donalds',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 109
+        price: 109,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/dc2f6185-f15e-4b46-aab3-e99fe707a796.jpg',
@@ -69,7 +79,8 @@ const dishList = [
         type: 'Пицца',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 245
+        price: 245,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/cb3bfb59-786a-438b-9c94-02887700f8ee.jpg',
@@ -77,7 +88,8 @@ const dishList = [
         type: 'Пицца',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 395
+        price: 395,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/8a813e3b734e457c848a60fc70a100d5_233x233.jpeg',
@@ -85,7 +97,8 @@ const dishList = [
         type: 'Пицца',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 395
+        price: 395,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/8ab3db32-6edf-4d99-a49a-3e5b2d55d8de.jpg',
@@ -93,7 +106,8 @@ const dishList = [
         type: 'Пицца',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 395
+        price: 395,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/ec9759ff-4fc8-45a4-bc46-9727acc9f90d.jpg',
@@ -101,7 +115,8 @@ const dishList = [
         type: 'Напитки',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 95
+        price: 95,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/dfbbbf23b0a1454bb78537ae921df47c_233x233.jpeg',
@@ -109,7 +124,8 @@ const dishList = [
         type: 'Напитки',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 135
+        price: 135,
+        id: uuid()
     },
     {
         url: 'https://dodopizza-a.akamaihd.net/static/Img/Products/c1b00331327145d285117c147257dd10_233x233.jpeg',
@@ -117,7 +133,8 @@ const dishList = [
         type: 'Напитки',
         brand: 'Додо Пицца',
         description: 'Малосольные огурчики пипрони с молочком',
-        price: 115
+        price: 115,
+        id: uuid()
     }
 
 ]

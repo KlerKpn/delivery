@@ -1,3 +1,5 @@
+Node version 14.15.1
+
 * react
  * redux
   * react-router
