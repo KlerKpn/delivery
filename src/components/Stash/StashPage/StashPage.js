@@ -45,7 +45,7 @@ const StashPage = props => {
                             type='dark'
                         >
                             Оформить заказ
-                            </Button>
+                        </Button>
                     </div>
                 </div>
             </div>

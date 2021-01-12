@@ -1,15 +1,19 @@
 import React from 'react'
 import classes from './Input.module.scss'
 
-function isInvalid({valid, touched, shouldValidate}){
-    return !valid && touched && shouldValidate
-}
-
 const Input = props =>{
 
     const inputType = props.type || 'text'
     const cls = [classes.Input]
     const htmlFor = `${inputType}-${Math.random()}`
+
+    function isInvalid({valid, touched, shouldValidate}){
+        console.log('check : ', !valid && touched && shouldValidate)
+        if(touched){
+            return !(valid && shouldValidate)
+        }
+        
+    }
 
     if(isInvalid(props)){
         cls.push(classes.invalid)
