@@ -49,8 +49,20 @@
                                     li{
                                         margin-bottom: 23px;
                                         font-size: .6rem;
+
+                                        a{
+                                            text-decoration: none;
+                                            &:focus, &:hover, &:visited, &:link, &:active {
+                                            text-decoration: none;    
+                                            color: white;
+                                            font-size: .6rem;                                  
+                                            }
+                                        }
                                         &:last-child{
                                             margin-bottom: 0;
+                                            @media (max-width:1000px) {
+                                                margin-bottom: 23px;
+                                            }
                                         }
                                     }
                             }

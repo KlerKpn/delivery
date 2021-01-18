@@ -3,6 +3,7 @@ import classes from './Footer.module.scss'
 import Logo from '../../assets/image/Logo';
 import AppStore from '../../assets/image/iconAppStore.png'
 import GooglePlay from '../../assets/image/iconGooglePlay.png'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const cls = [
@@ -31,7 +32,10 @@ const Footer = () => {
                                 About Eats
                             </li>
                             <li>
-                                Become a Delivery Partner
+                                <Link
+                                    to='/delivery_partner'>
+                                    Become a Delivery Partner
+                                </Link>
                             </li>
                             <li>
                                 Become a Restaurant Partner
@@ -50,7 +54,7 @@ const Footer = () => {
                                 Help
                             </li>
                             <li>
-                               FAQs
+                                FAQs
                             </li>
                         </ul>
                     </div>
