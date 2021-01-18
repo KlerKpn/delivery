@@ -38,7 +38,10 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                Become a Restaurant Partner
+                                <Link
+                                    to='/restaurant_partner'>
+                                    Become a Restaurant Partner
+                                </Link>
                             </li>
                         </ul>
                     </div>

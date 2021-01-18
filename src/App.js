@@ -8,6 +8,7 @@ import RestaurantsList from './components/Restaurants/RestaurantsList/Restaurant
 import BrandPage from './components/Restaurants/BrandPage/BrandPage';
 import StashPage from './components/Stash/StashPage/StashPage';
 import DeliveryPartner from './components/Forms/DeliveryPartner';
+import RestaurantPartner from './components/Forms/RestaurantPartner';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/auth' exact component={Auth} />
           <Route path='/stash' exact component={StashPage} />
           <Route path='/delivery_partner' exact component={DeliveryPartner} />
+          <Route path='/restaurant_partner' exact component={RestaurantPartner}/>
           <Redirect to='/' component={ListItems} />
         </Switch>
       </Layout>

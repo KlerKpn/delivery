@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Input from './../UI/Input/Input';
 import classes from './FormStyles.module.scss'
@@ -6,20 +7,33 @@ import Button from './../UI/Button/Button';
 const DeliveryPartner = props => {
     return (
         <div>
-            <h2>Станьте нашим партнером</h2>
-            <p>Распространяйте продукты и находите новых клиентов с нашим сервисом</p>
+            <h2>Станьте нашим курьером</h2>
+            <p>Доставляйте продукты компаний и получайте вознаграждение</p>
             <form>
                 <div className={classes.Step}>
-                    <span>Имя вашей компании</span>
+                    <span>ФИО</span>
                     <Input />
                 </div>
                 <div className={classes.Step}>
-                    <span>Ссылка на веб-сайт</span>
+                    <span>Телефон для связи</span>
                     <Input />
                 </div>
                 <div className={classes.Step}>
-                    <span>Email для связи</span>
-                    <Input />
+                    <span>У вас есть опыт работы курьером?</span>
+                    <div className={classes.Step}>
+                        <div>
+
+                            <label for="yes">Да
+                            <input type="radio" id="yes"
+                                    name="skill" value="Да" />
+                            </label>
+
+                            <label for="no">Нет
+                            <input type="radio" id="no"
+                                    name="skill" value="no" />
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <Button
                     type='dark'
