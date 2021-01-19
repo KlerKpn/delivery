@@ -1,1 +1,2 @@
 export const ADD_TO_STASH = 'ADD_TO_STASH'
+export const SET_COUNTER_ITEM = 'SET_COUNTER_ITEM'

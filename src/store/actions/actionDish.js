@@ -1,10 +1,30 @@
-import { ADD_TO_STASH } from './ActionTypes';
+import { ADD_TO_STASH, SET_COUNTER_ITEM } from './ActionTypes';
 
 
 export function addToStash(result) {
     return {
         type: ADD_TO_STASH,
         payload: result
+    }
+}
+
+export function stashCounterItem(value, id) {
+    console.log(value, id)
+    return (dispatch, getState) => {
+        const stash = getState().dishReducer.stash
+        if (value) {
+            const item = getState().dishReducer.data.filter(el => el.id === id)
+            stash.push(item[0])
+        }
+        dispatch(setCounterItem(stash))
+    }
+}
+
+export function setCounterItem(array) {
+    console.log('setCounter : ', array)
+    return {
+        type: SET_COUNTER_ITEM,
+        payload: array
     }
 }
 

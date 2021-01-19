@@ -22,7 +22,6 @@ const DeliveryPartner = props => {
                     <span>У вас есть опыт работы курьером?</span>
                     <div className={classes.Step}>
                         <div>
-
                             <label for="yes">Да
                             <input type="radio" id="yes"
                                     name="skill" value="Да" />

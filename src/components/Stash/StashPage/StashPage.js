@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import StashItem from './../StashItem/StashItem';
 import classes from './StashPage.module.scss'
 import Button from './../../UI/Button/Button';
+import { stashCounterItem } from '../../../store/actions/actionDish';
 
 const StashPage = props => {
 
@@ -75,6 +76,7 @@ const StashPage = props => {
                             <StashItem
                                 key={key}
                                 el={el}
+                                counter={props.counter}
                             />
                         )
                     })
@@ -90,4 +92,10 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(StashPage)
+function mapDispatchToProps(dispatch) {
+    return {
+        counter: (value, id) => dispatch(stashCounterItem(value, id))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(StashPage)

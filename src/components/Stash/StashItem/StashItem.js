@@ -1,15 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classes from './StashItem.module.scss'
 
-
 const StashItem = props => {
-
-    const [count, setCount] = useState()
-
-    function counter(type) {
-
-    }
-    console.log(props.el)
+    console.log(props)
     return (
         <div className={classes.StashItem}>
 
@@ -22,10 +15,11 @@ const StashItem = props => {
                 </div>
             </div>
             <div className={classes.counter}>
-                <button onClick={() => counter('plus')}>+</button>
-                <div> {props.el.count}
+                <button onClick={() => props.counter(true, props.el.id)}>+</button>
+                <div>
+                    {props.el.count}
                 </div>
-                <button onClick={() => counter('minus')}>-</button>
+                <button onClick={() => props.counter(false, props.el.id)}>-</button>
             </div>
         </div>
     )
