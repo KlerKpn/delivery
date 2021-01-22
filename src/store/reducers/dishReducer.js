@@ -16,7 +16,7 @@ export default function dishReducer(state = initialState, action) {
         case SET_COUNTER_ITEM:
             return {
                 ...state,
-                stash: action.payload
+                stash: [...action.payload]
             }
         default:
             return { ...state }

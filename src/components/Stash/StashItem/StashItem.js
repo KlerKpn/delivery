@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './StashItem.module.scss'
+import ToggleCount from './../../UI/ToggleCount/ToggleCount';
 
 const StashItem = props => {
     console.log(props)
@@ -15,13 +16,13 @@ const StashItem = props => {
                 </div>
             </div>
             <div className={classes.counter}>
-                <button onClick={() => props.counter(true, props.el.id)}>+</button>
-                <div>
-                    {props.el.count}
-                </div>
-                <button onClick={() => props.counter(false, props.el.id)}>-</button>
+                <ToggleCount
+                    onPlus={() => props.counter(true, props.el.id)}
+                    count={props.el.count}
+                    onMinus={() => props.counter(false, props.el.id)}
+                />
             </div>
-        </div>
+        </div >
     )
 }
 

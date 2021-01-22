@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useSelector } from 'react'
 import { connect } from 'react-redux';
 import StashItem from './../StashItem/StashItem';
 import classes from './StashPage.module.scss'
@@ -31,6 +31,8 @@ const StashPage = props => {
         setPrice(prev => prev = currentPrice)
     }
 
+    // const value = useSelector(state => state.value);
+    // console.log(value)
     useEffect(() => {
         renderHandler()
         countPrice()
