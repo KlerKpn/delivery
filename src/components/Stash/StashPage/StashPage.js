@@ -12,16 +12,32 @@ const StashPage = props => {
     const [buy, setBuy] = useState(false)
 
     function renderHandler() {
-        props.data.forEach(el => {
-            const arr = props.data.filter(item => item === el)
-            const count = arr.length
-            const item = arr[0]
-            Object.defineProperty(item, 'count', {
-                writable: true,
-                value: count
+        props.data.length > 0
+            ? props.data.forEach(el => {
+                const arr = props.data.filter(item => item === el)
+                const count = arr.length
+                const item = arr[0]
+                Object.defineProperty(item, 'count', {
+                    writable: true,
+                    value: count
+                })
+
+                if (array.length > 0) {
+                    if (array.some(e => e.id === item.id && e.count !== item.count)) {
+                        const data = array.map(el => {
+                            if (el.count !== item.count && el.id === item.id) {
+                                el = item
+                            }
+                            return el
+                        })
+                        setArray(prev => data)
+                    }
+                } else {
+                    setArray(prev => [...prev, item])
+                }
+
             })
-            setArray(prev => [...prev, item])
-        })
+            : setArray()
     }
 
     function countPrice() {
@@ -31,12 +47,11 @@ const StashPage = props => {
         setPrice(prev => prev = currentPrice)
     }
 
-    // const value = useSelector(state => state.value);
-    // console.log(value)
+
     useEffect(() => {
         renderHandler()
         countPrice()
-    }, [])
+    })
 
     let buyLink = `https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9E%D0%B1%D1%89%D0%B0%D1%8F%20%D1%81%D1%83%D0%BC%D0%BC%D0%B0%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BE%D0%BA&targets-hint=&default-sum=${price}&button-text=11&payment-type-choice=on&address=on&hint=&successURL=https%3A%2F%2Fdelivery-service-c232f.web.app%2F&quickpay=shop&account=4100116381229704`
 

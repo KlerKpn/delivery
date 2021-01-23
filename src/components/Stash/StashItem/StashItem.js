@@ -3,7 +3,6 @@ import classes from './StashItem.module.scss'
 import ToggleCount from './../../UI/ToggleCount/ToggleCount';
 
 const StashItem = props => {
-    console.log(props)
     return (
         <div className={classes.StashItem}>
 

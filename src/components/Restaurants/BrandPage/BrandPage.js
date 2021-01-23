@@ -4,7 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import classes from './BrandPage.module.scss'
 import { connect } from 'react-redux'
 import Item from './../../Item/Items'
-import BG from '../../../assets/image/BG.png'
+import BG from '../../../assets/image/BG.jpg'
 
 const BrandPage = props => {
     // console.log(props.match.params.id, props.brand)
@@ -84,12 +84,7 @@ const BrandPage = props => {
             {
                 brand
                     ? <div className={classes.BrandPage}>
-                        <div className={classes.Brand_BG}>
-                            <div>
-                                <image className={classes.Brand_image} src={BG} alt='logo' />
-                            </div>
-                        </div>
-
+                        <div className={classes.Brand_BG} />
                         {tabsGenerator()}
                     </div>
                     : null

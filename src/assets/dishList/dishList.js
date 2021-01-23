@@ -2,7 +2,7 @@ import { v4 as uuid } from 'uuid';
 
 const dishList = [
     {
-        url: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Big_Mac_hamburger.jpg',
+        url: 'https://avatarko.ru/img/kartinka/14/zhivotnye_eda_zhaba_13164.jpg',
         label: 'Биг мак',
         type: 'burger',
         brand: 'Mac Donalds',

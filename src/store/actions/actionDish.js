@@ -9,19 +9,23 @@ export function addToStash(result) {
 }
 
 export function stashCounterItem(value, id) {
-    console.log(value, id)
     return (dispatch, getState) => {
-        const stash = getState().dishReducer.stash
+        let stash = getState().dishReducer.stash
         if (value) {
             const item = getState().dishReducer.data.filter(el => el.id === id)
             stash.push(item[0])
+        } else {
+            const index = getState().dishReducer.stash.findIndex(e => e.id === id)
+            console.log(index)
+            const item = getState().dishReducer.stash
+            item.splice(index, 1)
+            stash = item
         }
         dispatch(setCounterItem(stash))
     }
 }
 
 export function setCounterItem(array) {
-    console.log('setCounter : ', array)
     return {
         type: SET_COUNTER_ITEM,
         payload: array
